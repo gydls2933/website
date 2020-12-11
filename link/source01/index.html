@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>chapter02</title>
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/css01.css" type="text/css">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/layout.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<div class="header_inner">
+			<div class="titset">
+				<img src="img/logo.png">
+			</div>
+			 <div class="nav">
+				<ul style="font-family:''바탕'">
+						<li><a href="#">매장 신제품</a></li>
+						<li><a href="#">DIY</a></li>
+						<li><a href="#">반갑습니다</a></li>
+						<li><a href="#">숨겨진 이야기</a></li>
+						<li><a href="#">매장정보</a></li>
+						<li><a href="#">연락처</a></li>
+					</ul>
+			 </div>
+		</div>
+	</div>
+	<div class="page main">
+	
+	<div class="visual">
+		
+		<div class="inner">
+			<div class="gif">
+				<div class="gifbox"></div>
+				<div class="gifbox ty1"></div>
+				<div class="gifbox ty2"></div>
+	   			<div class="gifbox ty3"></div>
+		    </div>
+			<div class="simg">
+				<img src="img/mainpng.jpg" />
+			</div>
+			
+		</div>
+		
+	</div>	
+	</div>
+	<div class="page second">
+			<div class="inner">
+				<a href="javascript:void(0)" class="btn">
+					<span class="simg">
+						<img src="img/secondleft.png" alt="">
+					</span>
+					<span class="leftbtn">살펴보기</span>
+					
+				</a>
+				<a href="javascript:void(0)" class="btn">
+					<span class="simg">
+						<img src="img/secondright.png" alt="">
+					</span>
+					<span class="leftbtn" style="left:390px">매장찾기</span>
+					</a>
+				
+			</div>
+		
+	</div>
+	<div class="page third">
+	<div class="container">
+	
+</div>
+<style>
+		.testbox {
+			position:relative;
+			width:1091px; height: 728px; border:1px solid #f00 }
+		.testbox .bg {width:100%; height:100%; 
+		-webkit-mask-image:url('img/third2.png') no-repeat 0 0
+		}
+		.testbox .you { 
+		position:absolute; top:0; left: 0; z-index: -1
+		}
+	</style>
+	
+		<div class="thirdimg">
+			<div class="inner">
+				<div class="simg">
+					<a href="javascript:void(0)" class="btn" id="snsPop"><img src="img/third_mod.png"/></a>
+
+<!--
+					<div class="clip">
+					<iframe class="svg-clipped" width="695" height="515" src="https://www.youtube.com/embed/HYHIGRam6eU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+  
+  
+					<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 600 411" style="enable-background:new 0 0 272 411;" xml:space="preserve">
+					<defs>
+					<clipPath id="svgPath">
+					<path class="st0" d="M1.8,144c0,0-3-120,34-129c0,0,58-15,96-9c0,0,229-3,243-6c0,0,159,0,190,6c0,0,73,8,81,11c0,0,30-4,37,33
+					c0,0,17,54,11,94c0,0,1,124,5,126c0,0-2,151-8,152c0,0,2,63-40,66c0,0-65,23-153,23l-278,11c0,0-119,0-122-4c0,0-64-2-81-36
+					c0,0-16-44-15-76V279c0,0-4-85,0-90V144z"/>
+					</clipPath>
+					</defs>
+					</svg>
+						
+					</div>
+-->
+					
+
+					
+					
+				<!--<iframe width="738" height="521" src="https://www.youtube.com/embed/HYHIGRam6eU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+				</div>
+
+			</div>
+
+		</div>	
+
+	</div>
+
+	<div class="page fourth">
+		<div class="inner">
+			<a href="javascript:void(0)" class="btn">
+				<span class="simg">
+					<img src="img/fouleft.png" alt="">
+				</span>
+				<span class="leftbtn">들어가기</span>
+			</a>
+			<a href="javascript:void(0)" class="btn">
+				<span class="simg">
+					<img src="img/fouright.png" alt="">
+				</span>
+				<span class="leftbtn">구독하기</span>
+			</a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="grass">
+
+		</div>
+
+	</div>
+</div>
+
+<div id="lypop">
+	<div class="lypop_cont">
+		<a href="javascript:void(0)" class="closebtn">
+			<span></span>			
+			<span></span>			
+		</a>
+		<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HYHIGRam6eU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		
+	</div>
+</div>				
+<script>
+	$("#snsPop").on("click", function() { 
+		var _this = $(this);
+		$("body").css('overflow','hidden');
+		$("#lypop").show();		
+	});
+	$(".closebtn").on("click", function() { 
+		var _this = $(this);
+		$("body").removeAttr("style");
+		$("#lypop").hide();
+	});	
+</script>
+</body>
+</html>

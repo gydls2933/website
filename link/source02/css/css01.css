@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin: 0; padding: 0;}
+
+body {background:#ffffff}
+
+li {list-style: none;}
+
+a {text-decoration: none; color: #1B1B1B;}
+
+.hidden {visibility: hidden; width: 0; height: 0; font-size: 0;}
+
+.container{}
+
+.header {position:relative; height: 80px; background: #ffffff}
+.header .header_inner {min-width:1280px; height:80px; border:1px solid #f00; margin: 0 auto ; padding:0 93px 0 123px; overflow: hidden}
+.header .header_inner .logo {float:left}
+.header .header_inner .logo img {}
+.header .header_inner .menu {float:right; text-align: center}
+.header .header_inner .menu ul, ol, li {list-style: none; float: right; margin: 4px; padding: 11px; font-size:16px; font-weight: 800}
+.header .header_inner .menu > li {float:right}
+.header .header_inner .menu > li > a {display:block;}
+
+
+
+.main { position: relative; height:100vh}
+
+.main .visual {position:relative; height: 100%}
+.main .visual .grid { }
+.main .visual .grid:first-child { 
+position:absolute; top:0; bottom:0; left:5vw; width:50%; height: 100%;
+display:flex; align-items: flex-start; flex-direction: column; justify-content: center
+}
+.main .visual .grid:first-child img {width:100%}
+.main .visual .grid:first-child .simg + .stxt {margin-top:100px }
+.main .visual .grid:first-child .stxt{font-family: 'G마켓 산스 Bold'; font-size: 29.3px; color: #808080}
+.main .visual .grid:first-child .learn_btn{font-family:'G마켓 산스 Light'; width: 111px; width: 167px; height: 55px; color: #fff; text-align: center; background: #808080; font-size: 19.85px; border: none; border-radius: 17px; position: absolute; top: 83%; padding: 14px;}
+
+
+.main .visual .grid:last-child {position:absolute; top:0; right:0; bottom:0; left:0; 
+background:url('../img/mainplayer.png') no-repeat right 100%; 
+background-size:contain
+}
+/*
+.main .visual {height:1219px; display: flex}
+.main .visual .grid {flex: 1; border:1px solid #f00;}
+
+.main .visual .grid:first-child {margin-left: 100px;  height: 262px; position: relative; top:236px;}
+.main .visual .grid:last-child {background: url(../img/mainplayer.png)no-repeat 0 0; width: 1256px; height: 1219px; position: relative; transform: translateX(-250px);}
+*/
+
+.player{position: relative;}
+.player .inner {border:1px solid #FC5E00; background: url(../img/secondbg.png)no-repeat 0 0; position: absolute; width: 99vw; height: 1255px;}
+.player .inner .grid:first-child {background: url(../img/player.jpg)no-repeat 0 0; position: absolute; top: -5px; left: 0; bottom: 0; right: 0}
+
+
+.player .inner .grid:last-child {width: 100%; float: right}
+.player .inner .grid:last-child .text {float: right; color: #FFFFFF; margin-right: 50px}
+.player .inner .grid:last-child .text .btxt {right:0; top: 0;font-family:"GmarketSansTTFBold"; font-size: 99px}
+.player .inner .grid:last-child .text .stxt {font-family: 'GmarketSansTTFMedium'; font-size: 18px}
+
+
+.team{position: relative;}
+.team .inner{background: url(../img/team.jpg)no-repeat 0 0; position: absolute;width: 99vw; height: 1016px;top: 1257px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
