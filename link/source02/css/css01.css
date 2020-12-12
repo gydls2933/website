@@ -14,7 +14,7 @@ a {text-decoration: none; color: #1B1B1B;}
 .container{}
 
 .header {position:relative; height: 80px; background: #ffffff}
-.header .header_inner {min-width:1280px; height:80px; border:1px solid #f00; margin: 0 auto ; padding:0 93px 0 123px; overflow: hidden}
+.header .header_inner {min-width:1280px; height:80px;  margin: 0 auto ; padding:0 93px 0 123px; overflow: hidden}
 .header .header_inner .logo {float:left}
 .header .header_inner .logo img {}
 .header .header_inner .menu {float:right; text-align: center}
@@ -51,7 +51,7 @@ background-size:contain
 */
 
 .player{position: relative;}
-.player .inner {border:1px solid #FC5E00; background: url(../img/secondbg.png)no-repeat 0 0; position: absolute; width: 99vw; height: 1255px;}
+.player .inner { background: url(../img/secondbg.png)no-repeat 0 0; position: absolute; width: 99vw; height: 1255px;}
 .player .inner .grid:first-child {background: url(../img/player.jpg)no-repeat 0 0; position: absolute; top: -5px; left: 0; bottom: 0; right: 0}
 
 

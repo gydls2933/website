@@ -14,7 +14,7 @@ a {text-decoration: none; color: #1B1B1B;}
 .container {min-width: 1280px;}
 
 .header {position:relative; height:105px; background:#ffffff}
-.header .header_inner {max-width: 1703px; min-width:1280px; height:105px; border:1px solid #f00; margin:0 auto; padding:0; overflow: hidden}
+.header .header_inner {max-width: 1703px; min-width:1280px; height:105px; margin:0 auto; padding:0; overflow: hidden}
 .header .header_inner .titset {float:left}
 .header .header_inner .titset img {}
 .header .header_inner .nav {float:right; text-align: center}
@@ -29,11 +29,11 @@ a {text-decoration: none; color: #1B1B1B;}
 
 
 .visual .inner {margin:0 auto; padding:0; 
-border:1px solid #06f;
+
 }
 .visual .inner::after {content: ""; background: url(../img/mainside.jpg)no-repeat 0 0; display: block; width: 21px; height:212px; bottom: -24px; right: 40px; position: absolute}
 
-.visual .inner .simg {border: 1px solid #f00;
+.visual .inner .simg {
     /* width: 1703px; */
     /* width: calc(100vw); */
     width: 100%;
@@ -56,7 +56,7 @@ width:1707px; height:740px; margin:0 0 0 -852px;
 */
 
 .visual .inner .gif {position: relative; }
-.visual .inner .gif .gifbox {border: 1px solid #01F84B;  background: url('../img/eyes.gif')no-repeat 0 0; position: absolute; width: 97px; height: 91px; top: 259px;left: 296px; display: block;}
+.visual .inner .gif .gifbox {  background: url('../img/eyes.gif')no-repeat 0 0; position: absolute; width: 97px; height: 91px; top: 259px;left: 296px; display: block;}
 .visual .inner .gif .gifbox + .ty1 {background: url('../img/frame.gif')no-repeat 0 0; position: absolute; width: 175px; height: 165px; top: 19px; left: 133px; display: block}
 .visual .inner .gif .gifbox + .ty2 {background: url('../img/ghost.gif')no-repeat 0 0; position: absolute; width: 97px; height: 91px; top: 445px; left: 291px; display: block;}
 .visual .inner .gif .gifbox + .ty3 {background: url(../img/heart.gif)no-repeat 0 0; position: absolute; width: 95px; height: 123px; top: 184px; left: 1520px; right: 0;}
@@ -76,7 +76,7 @@ position:absolute; bottom:-99px; left:46px
     top: 0;
     left: 50%;
    margin: 0 0 0 -852px;*/
-    border: 1px solid #f00;
+    
     display: flex;
     padding: 0 110px;}
 .second .inner::before {content:""; display:block; background: url('../img/secondbefore.png')no-repeat 0 0; position:absolute; width: 213px; height: 214px; bottom: 27px; left: 120px; right: 0; margin: auto; z-index: 9999 }
@@ -86,7 +86,7 @@ position:absolute; bottom:-99px; left:46px
 	display: block;
     position: relative;
     width: calc(50% + 60px);
-    border: 1px solid #f00;
+    
     flex: none;
 }
 .second .inner .btn:first-child {  z-index: 100; }
@@ -141,8 +141,8 @@ position:absolute; bottom:-99px; left:46px
 .third .thirdimg {position:relative; /*height:914px*/}
 .thirdimg::before {content:""; display:block; background:url('../img/palette.gif')no-repeat 0 0; position:absolute; height:220px; width:220px; top:-91px;}
 .third .thirdimg .inner {margin:0 auto; padding:0; 
-border:1px solid #D603F3;}
-.third .thirdimg .inner .simg {border: 1px solid #f00; width: 100%; padding: 0 110px; margin: auto; background-size: 100%; position: relative;}
+}
+.third .thirdimg .inner .simg { width: 100%; padding: 0 110px; margin: auto; background-size: 100%; position: relative;}
 
 .third .thirdimg .inner .simg .clip {}
 .thirdimg .inner img {width:100%}
@@ -171,7 +171,7 @@ border:1px solid #D603F3;}
 
 .fourth {position: relative;}
 .fourth::after{content:""; display: block; background: url('../img/flag.png')no-repeat 0 0; position:absolute; width:987px; height:180px; top:-120px; right:-6px}
-.fourth .inner {border: 1px solid #f00;
+.fourth .inner {
     display: flex;
     padding: 0 110px;}
 .fourth .inner::before{content:""; display:block; background:url('../img/gift.gif')no-repeat 0 0; position: absolute; height:191px; width: 124px; left:0; top:160px; z-index:9999 }
