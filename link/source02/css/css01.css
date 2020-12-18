@@ -11,31 +11,64 @@ a {text-decoration: none; color: #1B1B1B;}
 
 .hidden {visibility: hidden; width: 0; height: 0; font-size: 0;}
 
-.container{}
+.container{min-width: 1280px;}
 
-.header {position:relative; height: 80px; background: #ffffff}
-.header .header_inner {min-width:1280px; height:80px;  margin: 0 auto ; padding:0 93px 0 123px; overflow: hidden}
+.header {position:fixed; top:0; left:0; right:0; height: 80px;  z-index: 9999;
+transition:background .2s linear;
+}
+
+.header.ty1 {background:transparent}
+.header.ty2 {background:transparent}
+.header.ty3 {background:#fff}
+
+
+.header.ty2 .header_inner #menu > li > a {color:#fff}
+
+.header .header_inner {min-width:1280px; height:80px; margin: 0 auto ; padding:0 93px 0 123px; overflow: hidden}
 .header .header_inner .logo {float:left}
-.header .header_inner .logo img {}
-.header .header_inner .menu {float:right; text-align: center}
-.header .header_inner .menu ul, ol, li {list-style: none; float: right; margin: 4px; padding: 11px; font-size:16px; font-weight: 800}
-.header .header_inner .menu > li {float:right}
-.header .header_inner .menu > li > a {display:block;}
+.header .header_inner .logo img {margin-bottom: 44px}
+.header .header_inner #menu {float:right; text-align: center; margin-top: 18px}
+.header .header_inner #menu ul, ol, li {list-style: none; float: left; margin: 4px; padding: 11px; font-size:16px; font-weight: 800}
+.header .header_inner #menu > li {}
+.header .header_inner #menu > li > a {display:block;font-size: 18px;
+}
+
+
+.header .header_inner #menu.n01 > li > a:hover {color: #005caa;}
+.header .header_inner #menu.n02 > li > a:hover { }
+.header .header_inner #menu.n03 > li > a:hover { }
+.header .header_inner #menu.n04 > li > a:hover { }
 
 
 
-.main { position: relative; height:100vh}
+.main { position: relative; height:calc(100vh - 80px);}
 
-.main .visual {position:relative; height: 100%}
+.main .visual {position:relative; height: calc(100% - 100px); top: 0}
 .main .visual .grid { }
 .main .visual .grid:first-child { 
-position:absolute; top:0; bottom:0; left:5vw; width:50%; height: 100%;
+position:absolute; top:0; bottom:0; left:5%; width:50%; height: 100%;
 display:flex; align-items: flex-start; flex-direction: column; justify-content: center
 }
 .main .visual .grid:first-child img {width:100%}
 .main .visual .grid:first-child .simg + .stxt {margin-top:100px }
-.main .visual .grid:first-child .stxt{font-family: 'G마켓 산스 Bold'; font-size: 29.3px; color: #808080}
-.main .visual .grid:first-child .learn_btn{font-family:'G마켓 산스 Light'; width: 111px; width: 167px; height: 55px; color: #fff; text-align: center; background: #808080; font-size: 19.85px; border: none; border-radius: 17px; position: absolute; top: 83%; padding: 14px;}
+.main .visual .grid:first-child .stxt{font-family: 'Noto Sans KR', sans-serif; font-size: 29.3px; color: #808080; text-align: left}
+.main .visual .grid:first-child .learn_btn {font-family:'Noto Sans KR', sans-serif; width: 111px; width: 167px; height: 55px; color: #fff; text-align: center; background: #808080; font-size: 19.85px; border: none; border-radius: 5px; position: absolute; top: 83%; padding: 14px; z-index: 100;
+overflow: hidden
+}
+.main .visual .grid:first-child .learn_btn .txt {position:relative;
+z-index: 100
+}
+.main .visual .grid:first-child .learn_btn:after { 
+content:""; display:block; width:0; height:100%;
+background:#005caa; position:absolute; left:0; top:0;
+opacity: 0;	
+transition:all .2s linear	
+}
+.main .visual .grid:first-child .learn_btn:hover::after { 
+width:100%; opacity:1;
+}
+
+
 
 
 .main .visual .grid:last-child {position:absolute; top:0; right:0; bottom:0; left:0; 
@@ -50,24 +83,168 @@ background-size:contain
 .main .visual .grid:last-child {background: url(../img/mainplayer.png)no-repeat 0 0; width: 1256px; height: 1219px; position: relative; transform: translateX(-250px);}
 */
 
-.player{position: relative;}
-.player .inner { background: url(../img/secondbg.png)no-repeat 0 0; position: absolute; width: 99vw; height: 1255px;}
-.player .inner .grid:first-child {background: url(../img/player.jpg)no-repeat 0 0; position: absolute; top: -5px; left: 0; bottom: 0; right: 0}
+.player{position: relative; height: 100vh}
+.player .inner {border:1px solid #FC5E00; background: url(../img/secondbg.png)no-repeat 0 0; position: absolute; top:0; left: 0; right: 0; height: 100%;}
+.player .inner .grid:first-child {    background: url(../img/player.jpg)no-repeat center;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: rotate(0deg);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: translateX(-625px) scaleX(-1);
+    background-size: contain;
+}
 
 
-.player .inner .grid:last-child {width: 100%; float: right}
-.player .inner .grid:last-child .text {float: right; color: #FFFFFF; margin-right: 50px}
-.player .inner .grid:last-child .text .btxt {right:0; top: 0;font-family:"GmarketSansTTFBold"; font-size: 99px}
-.player .inner .grid:last-child .text .stxt {font-family: 'GmarketSansTTFMedium'; font-size: 18px}
+.player .inner .grid:last-child {width: 50%; float: right; margin-right:50px}
+
+
+
+.player .inner .grid:last-child .text { color: #FFFFFF;  padding-top: 150px}
+.player .inner .grid:last-child .text .btxt {right:0; top: 0; font-family: 'GmarketSansBold'; font-size: 99px; line-height: 1;text-align: left}
+.player .inner .grid:last-child .text .stxt {font-family: 'Noto Sans KR', sans-serif; font-size: 15px; line-height: 1.5; margin-top: 50px; text-align: left}
+
+.player .inner .grid:last-child .tb {margin:50px 0 0 0}
+.player .inner .grid:last-child .tb .result {}
+.player .inner .grid:last-child .tb table {background:transparent}
+.player .inner .grid:last-child .tb table th { 
+background:rgba(255,255,255,.5);
+}
+.player .inner .grid:last-child .tb table td { 
+background:transparent; color:#fff; text-align: center
+}
+
+.player .inner .grid:last-child .tb table th,
+.player .inner .grid:last-child .tb table td { 
+font-family: 'Noto Sans KR', sans-serif;
+border:1px solid #fff; padding:10px 7px	
+}
+.player .inner .grid:last-child .tb table caption.view {display:table-caption; justify-content: space-between; overflow: hidden}
+
+.player .inner .grid:last-child .tb table caption.view .score { 
+float:left; color:#fff 
+}
+.player .inner .grid:last-child .tb table caption.view .number { 
+float:right; color:#fff
+}
+
+
+
+
+
+/*
+.player .inner .grid:last-child .tb .result tbody  tr:first-child{border: 1px solid #FFFFFF; color: #3e3e3e; background: #9f9f9f}
+.player .inner .grid:last-child .tb .result tbody tr:last-child {border: 1px solid #FFFFFF;text-align: center;color: #ffffff } 
+*/
+
+ 
+.player .inner .grid:last-child .more {text-align:right; margin-top:20px}
+.player .inner .grid:last-child .more .btn {
+	display:block;
+	font-family: 'Noto Sans KR', sans-serif; color: #FFFFFF; text-align: right; margin-right: 5px; margin-top: 66px;
+}
+.player .inner .grid:last-child .more .btn::after { 
+content:""; display:inline-block; width: 15px; height:17px;
+background:url('../img/readmore.png') no-repeat; 
+background-size:auto 17px; vertical-align: middle; margin-left:5px; margin-bottom:2px
+}
+.player .inner .grid:last-child .more .btn:hover { 
+color:#afb3f0
+}
+.player .inner .grid:last-child .more .btn:hover::after { 
+background-position:-16px 0
+}
+
+
+
+
+
+/*
+.player .inner .grid:last-child .more .simg {}
+*/  
+
 
 
 .team{position: relative;}
-.team .inner{background: url(../img/team.jpg)no-repeat 0 0; position: absolute;width: 99vw; height: 1016px;top: 1257px}
+.team .inner {position: absolute; top:0; left: 0; right: 0; height: 100%;
+display:flex
+}
+
+.team .inner .grid:first-child {width:756px; border:1px solid #f00;
+
+}
+.team .inner .grid:first-child .text {
+	display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; padding-left:50px
+}
+.team .inner .grid:first-child .text .sintxt {font-family: 'GmarketSansLight'; font-size: 54.82px; line-height: 1.2}
+.team .inner .grid:first-child .text .btxt {font-family: 'GmarketSansBold'; font-size: 61.7px; line-height: 1.2}
+.team .inner .grid:first-child .text .stxt {font-family: 'Noto Sans KR', sans-serif;font-size: 18px; margin-top:20px}
+.team .inner .grid:first-child .text .team_btn {font-family:'Noto Sans KR', sans-serif; width: 111px; width: 167px; height: 55px; color: #fff; text-align: center; background: #808080; font-size: 20px; border: none; border-radius: 5px;  padding: 14px; margin-top:30px; position:relative;
+overflow: hidden
+}
+.team .inner .grid:first-child .text .team_btn .txt {position:relative;
+z-index: 100
+}
+.team .inner .grid:first-child .text .team_btn:after { 
+content:""; display:block; width:0; height:100%;
+background:#005caa; position:absolute; left:0; top:0;
+opacity: 0;	
+transition:all .2s linear	
+}
+.team .inner .grid:first-child .text .team_btn:hover::after { 
+width:100%; opacity:1;
+}
 
 
 
 
 
+
+
+.team .inner .grid:last-child {
+flex:1; 
+background: url(../img/teamleft.jpg)no-repeat center;
+background-size:cover; 
+	
+}
+/*
+.team .inner .grid:first-child {width: 50%; float: left;}
+.team .inner .grid:first-child .text {position: absolute; top:320px; text-align: left; margin-left: 83px; color: #201f1f}
+.team .inner .grid:first-child .text .sintxt {font-family: 'GmarketSansLight'; font-size: 54.82px}
+.team .inner .grid:first-child .text .btxt {font-family: 'GmarketSansBold'; font-size: 61.7px;}
+.team .inner .grid:first-child .text .stxt {font-family: 'Noto Sans KR', sans-serif;font-size: 18px}
+.team .inner .grid:first-child .team_btn {font-family:'Noto Sans KR', sans-serif; width: 111px; width: 167px; height: 55px; color: #fff; text-align: center; background: #808080; font-size: 19.85px; border: none; border-radius: 5px; position: absolute; top: 71%; left: 4.5%; padding: 14px; z-index: 100;
+overflow: hidden
+}
+.team .inner .grid:first-child .team_btn .txt {position:relative;
+z-index: 100
+}
+.team .inner .grid:first-child .team_btn:after { 
+content:""; display:block; width:0; height:100%;
+background:#005caa; position:absolute; left:0; top:0;
+opacity: 0;	
+transition:all .2s linear	
+}
+.team .inner .grid:first-child .team_btn:hover::after { 
+width:100%; opacity:1;
+}
+
+
+
+
+.team .inner .grid:last-child {background: url(../img/teamleft.jpg)no-repeat 0 0; position:absolute; width: 1175px; height: 968px; right: 0}
+*/
+
+
+#pp-nav {display:none}
 
 
 
