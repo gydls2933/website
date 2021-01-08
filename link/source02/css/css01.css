@@ -23,13 +23,20 @@ a {text-decoration: none; color: #1B1B1B;}
 .header .header_inner .nav > li > a {display:block;}
 
 
+.header .header_inner .nav a:hover{color: #dd052e}
+.header .header_inner .nav a:hover::after { 
+background-position:-16px 0
+}
+
+
+
+
 .visual {position:relative; }
-.visual::before {content:""; display:block; height: 176px;width: 182px; background:url('../img/mainleft.gif') no-repeat 0 0; position: absolute; left:0; top:140px}
+.visual::before {content:""; display:block; height: 176px;width: 182px; background:url('../img/mainleft.gif') no-repeat 0 0; position: absolute; left:0; top:205px}
 .visual::after {content:""; display:block; height: 238px;width: 236px; background:url('../img/mainright.gif') no-repeat 0 0; position: absolute; right:2px; top:59px;}
 
 
-.visual .inner {margin:0 auto; padding:0; 
-
+.visual .inner {margin:0 auto; padding:0;
 }
 .visual .inner::after {content: ""; background: url(../img/mainside.jpg)no-repeat 0 0; display: block; width: 21px; height:212px; bottom: -24px; right: 40px; position: absolute}
 
@@ -56,9 +63,9 @@ width:1707px; height:740px; margin:0 0 0 -852px;
 */
 
 .visual .inner .gif {position: relative; }
-.visual .inner .gif .gifbox {  background: url('../img/eyes.gif')no-repeat 0 0; position: absolute; width: 97px; height: 91px; top: 259px;left: 296px; display: block;}
-.visual .inner .gif .gifbox + .ty1 {background: url('../img/frame.gif')no-repeat 0 0; position: absolute; width: 175px; height: 165px; top: 19px; left: 133px; display: block}
-.visual .inner .gif .gifbox + .ty2 {background: url('../img/ghost.gif')no-repeat 0 0; position: absolute; width: 97px; height: 91px; top: 445px; left: 291px; display: block;}
+.visual .inner .gif .gifbox {background: url('../img/eyes.gif')no-repeat 0 0; position: absolute; width: 97px; height: 91px; top: 259px;left: 296px; display: block;}
+.visual .inner .gif .gifbox + .ty1 {background: url('../img/frame.gif')no-repeat 0 0; position: absolute; width: 175px; height: 165px; top: 104px; left: 133px; display: block}
+.visual .inner .gif .gifbox + .ty2 {background: url('../img/ghost.gif')no-repeat 0 0; position: absolute; width: 97px; height: 91px; top: 622px; left: 291px; display: block;}
 .visual .inner .gif .gifbox + .ty3 {background: url(../img/heart.gif)no-repeat 0 0; position: absolute; width: 95px; height: 123px; top: 184px; left: 1520px; right: 0;}
 
 .visual .inner .simg::after {content:""; display:block;
@@ -76,7 +83,7 @@ position:absolute; bottom:-99px; left:46px
     top: 0;
     left: 50%;
    margin: 0 0 0 -852px;*/
-    
+   
     display: flex;
     padding: 0 110px;}
 .second .inner::before {content:""; display:block; background: url('../img/secondbefore.png')no-repeat 0 0; position:absolute; width: 213px; height: 214px; bottom: 27px; left: 120px; right: 0; margin: auto; z-index: 9999 }
@@ -86,7 +93,6 @@ position:absolute; bottom:-99px; left:46px
 	display: block;
     position: relative;
     width: calc(50% + 60px);
-    
     flex: none;
 }
 .second .inner .btn:first-child {  z-index: 100; }
@@ -103,12 +109,12 @@ position:absolute; bottom:-99px; left:46px
     border-radius: 19px;
     /* transition: 0.3S; */
     position: absolute;
-    left: 29%;
-    top: 90%;
+    left: 25%;
+    top: 92%;
     transform: translate(-166%,-19%);
 	padding:10px
 }
-
+.second .inner .btn .leftbtn:last-child {}
 
 
 .second .inner .btn .simg {}
@@ -191,8 +197,8 @@ position:absolute; bottom:-99px; left:46px
     border-radius: 19px;
     /* transition: 0.3S; */
     position: absolute;
-    left: 65%;
-    top: 61%;
+    left: 50%;
+    top: 50%;
     transform: translate(-312%,-497%);
 	padding:10px}
 .fourth .inner .btn .leftbtn + .leftbtn{}
