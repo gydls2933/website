@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>chapter02</title>
+<title>HYO IN's Portfolio</title>
 <link rel="stylesheet" href="css/reset.css" type="text/css">
 <link rel="stylesheet" href="css/css01.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 </head>
 
 <body>
@@ -16,12 +17,11 @@
 			</div>
 			 <div class="nav">
 				<ul style="font-family:''바탕'">
-						<li><a href="#">menu</a></li>
-						<li><a href="#">menu</a></li>
-						<li><a href="#">menu</a></li>
-						<li><a href="#">menu</a></li>
-						<li><a href="#">menu</a></li>
-						<li><a href="#">menu</a></li>
+						<li><a href="#">LEE</a></li>
+						<li><a href="#">HYOIN</a></li>
+						<li><a href="#">I'AM</a></li>
+						<li><a href="#">Hi</a></li>
+						
 					</ul>
 			 </div>
 		</div>
@@ -66,34 +66,85 @@
 				<div class="tit">
 					<h3 class="hd3"><img src="img/introduce.png"></h3>
 				</div>
-				<div class="intbox">
-					<a href="javascript:void(0)">
+				<div class="intboxset">
+					<div class="intbox">
 						<span class="simg">
 							<img src="img/simg01.png" alt="">
 						</span>
-						<span class="stxt">
-						
-						</span>
-					</a>
-					<a href="/website/link/source01/index.html">
+						<div class="btnset">
+							<a href="javascript:void(0)" class="btn view" target="_blank">detail view</a>
+						</div>
+					</div>
+					<div class="intbox">
 						<span class="simg">
 							<img src="img/simg02.png" alt="">
 						</span>
-						<span class="stxt"></span>
-					</a>
-					<a href="/website/link/source02/index.html">
+							<div class="btnset">
+								<a href="javascript:void(0)" class="btn view"  onclick="lypop(event, this)"  data-num="1">detail view</a>
+								<a href="javascript:void(0)" class="btn link" target="_blank">link</a>
+							</div>
+					</div>
+					<div class="intbox">
 						<span class="simg">
 							<img src="img/simg03.png" alt="">
 						</span>
-						<span class="stxt"></span>
-					</a>					
+						<div class="btnset">
+							<a href="javascript:void(0)" class="btn view"  onclick="lypop(event, this)"  data-num="2">detail view</a>
+							<a href="javascript:void(0)" class="btn link" target="_blank">link</a>
+						</div>
+					</div>					
 				</div>
 			</div>
-			
+<script>
+
+var lypop = function(e, _this) { 
+   e.preventDefault();
+   var _this = $(_this);
+   var _thisDataNum = _this.attr("data-num");
+   console.log(_thisDataNum);
+   var _origin = $(document).find("#lypop");
+   
+   
+   _origin.addClass("on");
+   $('body').css('overflow','hidden');
+   
+   _origin.find(".lypopcont .simg img").attr("src", "img/detailview0" + _thisDataNum +".jpg");
+   
+   
+};
+
+var lypopClose = function(e, _this) { 
+   e.preventDefault();
+   var _this = $(_this);
+   var _origin = $(document).find("#lypop");      
+   _origin.removeClass("on");
+   $('body').removeAttr('style');      
+};
+//pop-up
+	
+</script>
+
+
 		
 		</div>
 </div>
-		
+<div id="lypop">
+	<div class="inner">
+		<div class="lypopcont">
+			<div class="simg">
+				<img src="img/detailview01.jpg" alt="page">
+			</div>	
+		</div>
+		<a href="" class="closebtn" onClick="lypopClose(event, this)">
+			<div class="arrset">
+				<span></span>	    				
+				<span></span>
+			</div>
+		</a>	    			    		
+	</div>
+	<div class="bg"></div>
+</div>
+	   		
 
 </body>
 </html>
