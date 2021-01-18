@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Jumps Over';
+  src: url('Jumps Over.eot');
+  src: url('Jumps Over.eot?#iefix') format('embedded-opentype'),
+       url('Jumps Over.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JumpsOver';
+  src: url('JumpsOver.svg#JumpsOver') format('svg'),
+       url('JumpsOver.ttf') format('truetype'),
+       url('JumpsOver.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

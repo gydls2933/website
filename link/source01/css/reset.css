@@ -48,28 +48,70 @@ url("../font/NotoSans-Medium.woff2") format("woff2");
   font-style: normal; 
 }
 
-@font-face {
-    font-family: 'GmarketSansLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .navlist {
 	font: normal 100%/1.5 "NotoSans-Medium";
 }
 
+/*
+@font-face{
+    font-family:'FontAwesome';
+    src:url('../font/fontawesome-webfont.eot?v=4.7.0');
+    src:url('../font/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),url('../font/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('../font/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('../font/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('../font/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight:normal;
+    font-style:normal
+}
+*/
 @font-face {
-    font-family: 'GmarketSansBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("file:///E|/project/ams/WEB/font/fa-brands-400.eot");
+  src: url("file:///E|/project/ams/WEB/font/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("file:///E|/project/ams/WEB/font/fa-brands-400.woff2") format("woff2"), url("file:///E|/project/ams/WEB/font/fa-brands-400.woff") format("woff"), url("file:///E|/project/ams/WEB/font/fa-brands-400.ttf") format("truetype"), url("file:///E|/project/ams/WEB/font/fa-brands-400.svg#fontawesome") format("svg"); }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: url("file:///E|/project/ams/WEB/font/fa-regular-400.eot");
+  src: url("file:///E|/project/ams/WEB/font/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("file:///E|/project/ams/WEB/font/fa-regular-400.woff2") format("woff2"), url("file:///E|/project/ams/WEB/font/fa-regular-400.woff") format("woff"), url("file:///E|/project/ams/WEB/font/fa-regular-400.ttf") format("truetype"), url("file:///E|/project/ams/WEB/font/fa-regular-400.svg#fontawesome") format("svg"); }
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: url("file:///E|/project/ams/WEB/font/fa-solid-900.eot");
+  src: url("file:///E|/project/ams/WEB/font/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("file:///E|/project/ams/WEB/font/fa-solid-900.woff2") format("woff2"), url("file:///E|/project/ams/WEB/font/fa-solid-900.woff") format("woff"), url("file:///E|/project/ams/WEB/font/fa-solid-900.ttf") format("truetype"), url("file:///E|/project/ams/WEB/font/fa-solid-900.svg#fontawesome") format("svg"); }
+
+@font-face {
+  font-family: 'Jumps Over';
+  src: url('Jumps Over.eot');
+  src: url('Jumps Over.eot?#iefix') format('embedded-opentype'),
+       url('Jumps Over.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JumpsOver';
+  src: url('JumpsOver.svg#JumpsOver') format('svg'),
+       url('JumpsOver.ttf') format('truetype'),
+       url('JumpsOver.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
 
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 
 
